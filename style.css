@@ -1,0 +1,88 @@
+.body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(33, 33, 33);
+    
+    
+}
+
+.planets-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform:scaleX(5);
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(248, 244, 163);
+    box-shadow: 0 0 60px rgb(253. 203, 163) 0 0 98px rgb(184, 160, 26);
+    transform:scaleX(0.2)
+}
+
+.planet {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transform: scaleX(0.2);
+}
+
+#first-planet {
+    background-color:blue ;
+}
+#second-planet {
+    background-color: red;
+}
+#third-planet {
+    background-color: green;
+}
+
+.route {
+    width: 100%;
+    height: 100%;
+    animation: rotate 12s infinite linear;
+
+}
+
+.planet-container {
+    width: 60px;
+    height: 60px;
+    animation: correct 12s inifinite linear;
+    position: absolute;
+
+}
+
+#second-planet-conatiner {
+    left: 85px;
+}
+
+#third-planet-conatiner {
+    left: 42.5px;
+    top: 100px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes correct{
+    0% {
+        transofrm: rotateZ(360deg);
+    }
+    100% { 
+        transform: rotateZ(0deg);
+    }
+}
